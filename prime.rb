@@ -1,5 +1,5 @@
-# require 'benchmark'
-# require 'bigdecimal/math'
+require 'benchmark'
+require 'bigdecimal/math'
 
 def prime?(number)
   number_range = (2..number-1).to_a
@@ -10,4 +10,15 @@ def prime?(number)
   end
 end 
 
-# puts Benchmark.measure { BigMath.PI(10_000) }
+#def prime?(number) 
+  #if number <= 1 
+    #false 
+  #else 
+    #(2..number-1).to_a.none? {|factor| number % factor == 0 ? true : false }
+  #end
+#end 
+
+
+
+
+puts Benchmark.measure { BigMath.PI(10_000) }
